@@ -1,0 +1,5 @@
+URxvt.background: #000000
+URxvt.cursorBlink: true
+URxvt.font: xft:DejaVu Sans Mono:size=11
+URxvt.foreground: #ffffff
+URxvt.scrollBar: false
