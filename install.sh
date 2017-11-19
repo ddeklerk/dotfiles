@@ -18,7 +18,7 @@ localectl set-x11-keymap ${xkblayout} '' '' 'grp:ctrls_toggle,caps:ctrl_modifier
 echo "KEYMAP=${ckblayout}" | sudo tee -a /etc/vconsole.conf
 
 # Install the base packages to get bspwm running
-sudo pacman --quiet --noconfirm --needed -Syu bspwm sxhkd rxvt-unicode-patched dmenu
+sudo pacman --quiet --noconfirm --needed -Syu bspwm sxhkd rxvt-unicode dmenu
 echo "sxhkd -m 1 &" >> .xinitrc
 echo "exec bspwm" >> .xinitrc
 
