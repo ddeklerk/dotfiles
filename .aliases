@@ -4,3 +4,5 @@ alias grep='grep --color=auto'
 
 # dotfiles
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
+
+alias vimrc='vim $HOME/.vimrc'
