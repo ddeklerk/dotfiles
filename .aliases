@@ -1,0 +1,6 @@
+# Default bash aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+# dotfiles
+alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
