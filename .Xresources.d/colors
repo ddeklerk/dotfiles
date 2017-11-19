@@ -1,31 +1,46 @@
-! Black + DarkGrey
-*color0:  #000000
-*color8:  #555753
+*background:         base00
+*foreground:         base05
+*cursorColor:        base05
 
-! DarkRed + Red
-*color1:  #ff6565
-*color9:  #ff8d8d
+*scrollColor:        base05
+*highlightColor:     base02
+*highlightTextColor: base04
 
-! DarkGreen + Green
-*color2:  #93d44f
-*color10: #c8e7a8
+! Black
+*color0:  base00
+*color8:  base03
 
-! DarkYellow + Yellow
-*color3:  #eab93d
-*color11: #ffc123
+! Red
+*color1:  base08
+*color9:  base09
 
-! DarkBlue + Blue
-*color4:  #204a87
-*color12: #3465a4
+! Green
+*color2:  base0B
+*color10: base01
 
-! DarkMagenta + Magenta
-*color5:  #ce5c00
-*color13: #f57900
+! Yellow
+*color3:  base0A
+*color11: base02
 
-!DarkCyan + Cyan (both not tango)
-*color6:  #89b6e2
-*color14: #46a4ff
+! Blue
+*color4:  base0D
+*color12: base04
 
-! LightGrey + White
-*color7:  #cccccc
-*color15: #ffffff
+! Magenta
+*color5:  base0E
+*color13: base06
+
+! Cyan
+*color6:  base0C
+*color14: base0F
+
+! White
+*color7:  base05
+*color15: base07
+
+*color16: base09
+*color17: base0F
+*color18: base01
+*color19: base02
+*color20: base04
+*color21: base06

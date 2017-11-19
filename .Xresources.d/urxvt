@@ -1,5 +1,50 @@
-URxvt.background: #000000
 URxvt.cursorBlink: true
 URxvt.font: xft:DejaVu Sans Mono:size=11
-URxvt.foreground: #ffffff
 URxvt.scrollBar: false
+
+URxvt*background:                     base00
+URxvt*foreground:                     base05
+URxvt*cursorColor:                    base05
+
+URxvt*scrollColor:                    base05
+URxvt*highlightColor:                 base02
+URxvt*highlightTextColor:             base04
+
+! Black
+URxvt*color0:                         base00
+URxvt*color8:                         base03
+
+! Red
+URxvt*color1:                         base08
+URxvt*color9:                         base08
+
+! Green
+URxvt*color2:                         base0B
+URxvt*color10:                        base0B
+
+! Yellow
+URxvt*color3:                         base0A
+URxvt*color11:                        base0A
+
+! Blue
+URxvt*color4:                         base0D
+URxvt*color12:                        base0D
+
+! Magenta
+URxvt*color5:                         base0E
+URxvt*color13:                        base0E
+
+! Cyan
+URxvt*color6:                         base0C
+URxvt*color14:                        base0C
+
+! White
+URxvt*color7:                         base05
+URxvt*color15:                        base07
+
+URxvt*color16:                        base09
+URxvt*color17:                        base0F
+URxvt*color18:                        base01
+URxvt*color19:                        base02
+URxvt*color20:                        base04
+URxvt*color21:                        base06

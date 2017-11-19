@@ -1,2 +1,4 @@
+# include ".Xresources.d/base16-theme"
 # include ".Xresources.d/colors"
 # include ".Xresources.d/urxvt"
+# include ".Xresources.d/rofi"
