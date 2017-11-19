@@ -1,0 +1,13 @@
+rofi.bw: 0
+rofi.hide-scrollbar: true
+rofi.separator-style: none
+
+! State:           'bg',   'fg',   'bgalt','hlbg', 'hlfg'
+rofi.color-normal: base00, base07, base00, base07, base00
+rofi.color-urgent: base00, base08, base00, base08, base00
+rofi.color-active: base00, base0D, base00, base0D, base00
+!                  'bg',   'border'
+rofi.color-window: base00, base07
+
+rofi.modi: drun,run,window,ssh
+rofi.matching: fuzzy
