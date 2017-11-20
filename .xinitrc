@@ -16,6 +16,8 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 
 # Start dunst
 dunst &
+# Start compton
+compton &
 
 xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
