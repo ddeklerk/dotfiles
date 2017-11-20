@@ -2,3 +2,5 @@
 [user]
 	name = Danilo de Klerk
 	email = danilodeklerk@gmail.com
+[core]
+	editor = vim
