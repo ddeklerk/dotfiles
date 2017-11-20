@@ -28,3 +28,11 @@ mkdir -p ~/.config/sxhkd && cp /usr/share/doc/bspwm/examples/sxhkdrc "$_"
 
 # Remove the sxhkd call from bspwmrc
 sed -i '/sxhkd &/d' ~/.config/bspwm/bspwmrc
+
+# TODO add this to /etc/profile
+
+# # If used ID is greater than or equal to 1000 & if ~/.profile exists and is a file, then
+# # execute the file
+# if [[ $UID -ge 1000 && -f $HOME/.profile ]]; then
+# 	. $HOME/.profile
+# fi
