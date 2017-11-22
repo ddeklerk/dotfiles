@@ -5,4 +5,10 @@ alias grep='grep --color=auto'
 # dotfiles
 alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 
+# vim
 alias vimrc='vim $HOME/.vimrc'
+
+# pacman
+alias pacorph='pacaur -Rns $(pacaur -Qtdq)'
+alias pacls='pacaur -Q | wc -l'
+alias pacalone='comm -23 <(pacman -Qqt | sort) <(pacman -Sqg base base-devel | sort)'
