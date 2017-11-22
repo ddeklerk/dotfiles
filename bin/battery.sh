@@ -7,6 +7,7 @@ usage: $(basename $0) [-hlsb]
 	-l : print battery percentage (default)
 	-s : print battery state
 	-b : beep under critical level (see BAT_BELL)
+	-d : start a daemon to be notified on low battery level
 
 environment:
 	CRITICAL : the critical state level
@@ -34,6 +35,17 @@ state() {
 	echo "${BATS}"
 }
 
+deam() {
+	while true
+	do
+		getbat
+		bell
+
+		sleep $interval
+	done &
+	echo "Daemon started"
+}
+
 # Get battery name
 BATN=$(ls /sys/class/power_supply/ | grep BAT)
 
@@ -41,13 +53,18 @@ BATN=$(ls /sys/class/power_supply/ | grep BAT)
 test -z "$BATN" && exit 1
 
 # Get battery level and status (charging or not)
-BATC=$(cat /sys/class/power_supply/${BATN}/capacity)
-BATS=$(cat /sys/class/power_supply/${BATN}/status)
+getbat() {
+	BATC=$(cat /sys/class/power_supply/${BATN}/capacity)
+	BATS=$(cat /sys/class/power_supply/${BATN}/status)
+}
+getbat
 
 CRITICAL=${CRITICAL:-7}
-BAT_BELL=${BAT_BELL:-notify-send -urgency critical "Battery low"}
+BAT_BELL=${BAT_BELL:-notify-send --urgency critical "Battery low"}
+interval=120
 
 case $1 in
+	-d) deam ;;
 	-h) usage ;;
 	-s) state ;;
 	-b) bell ;;

@@ -19,6 +19,8 @@ dunst &
 # Start compton
 compton &
 
+[ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d
+
 xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
 exec bspwm
