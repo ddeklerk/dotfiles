@@ -129,3 +129,13 @@ XF86Audio{Raise,Lower}Volume
 
 XF86AudioMute
 	amixer get Master | grep "\[on\]" && amixer set Master mute || amixer set Master unmute
+
+#
+# Powermenu
+#
+
+XF86PowerOff
+	~/bin/powermenu.sh
+
+super + shift + Escape
+	~/bin/powermenu.sh
