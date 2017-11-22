@@ -119,3 +119,13 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# Volume controls
+#
+
+XF86Audio{Raise,Lower}Volume
+	amixer set Master 1%{+,-}
+
+XF86AudioMute
+	amixer get Master | grep "\[on\]" && amixer set Master mute || amixer set Master unmute
