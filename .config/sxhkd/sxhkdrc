@@ -139,3 +139,7 @@ XF86PowerOff
 
 super + shift + Escape
 	~/bin/powermenu.sh
+
+# Screen brightness
+XF86MonBrightness{Up,Down}
+	light {-A,-U} 5
