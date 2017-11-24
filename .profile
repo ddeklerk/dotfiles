@@ -7,3 +7,6 @@ if [[ $UID -ge 1000 && -d $HOME/bin && -z $(echo $PATH | grep -o $HOME=bin) ]]; 
 fi
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+export EDITOR="vim"
+export VISUAL="vim"
