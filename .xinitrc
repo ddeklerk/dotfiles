@@ -26,7 +26,7 @@ else
 		-cb "#$(getcolor.sh bg)" \
 		-cf "#$(getcolor.sh 1)" \
 		-frame_width 0 \
-		-sep_height 2 \
+		-sep_height 0 \
 		&
 fi
 # Start compton
