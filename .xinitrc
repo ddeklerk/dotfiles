@@ -15,7 +15,20 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 [ -x "$(command -v xcape)" ] && xcape -e 'Caps_Lock=Escape' &
 
 # Start dunst
-dunst &
+if ! [ -x "$(command -v getcolor.sh)" ]; then
+	dunst &
+else
+	dunst \
+		-lb "#$(getcolor.sh bg)" \
+		-lf "#$(getcolor.sh fg)" \
+		-nb "#$(getcolor.sh bg)" \
+		-nf "#$(getcolor.sh 4)" \
+		-cb "#$(getcolor.sh bg)" \
+		-cf "#$(getcolor.sh 1)" \
+		-frame_width 0 \
+		-sep_height 2 \
+		&
+fi
 # Start compton
 compton &
 
