@@ -1,3 +1,11 @@
+#!/bin/bash
+#
+# ~/.aliases
+#
+# Add the following snippet to .bashrc or .zshrc
+#
+#	[ -f "$HOME/.aliases" ] && . $HOME/.aliases
+
 # Default bash aliases
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
