@@ -1,6 +1,6 @@
 #!/bin/bash
 
-res=$(echo "logout|reboot|shutdown" | rofi -sep "|" -dmenu -i -p '' -width 8 -lines 3)
+res=$(echo "logout|reboot|shutdown" | $HOME/bin/rofi.sh -sep "|" -dmenu -i -p '' -width 8 -lines 3)
 
 out() {
 	for window_id in $(bspc query -W); do
