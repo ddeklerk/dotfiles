@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -show
+	[ -x $HOME/bin/rofi.sh ] && $HOME/bin/rofi.sh -show || rofi -show
 
 # make sxhkd reload its configuration files:
 super + Escape
