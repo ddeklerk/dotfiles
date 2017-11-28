@@ -4,3 +4,4 @@
 	email = danilodeklerk@gmail.com
 [core]
 	editor = vim
+	excludesfile = ~/.gitignore
