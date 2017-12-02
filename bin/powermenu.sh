@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Edit /etc/systemd/logind.conf and uncomment HandlePowerKey and set it to ignore
 
 res=$(echo "logout|suspend|hibernate|reboot|shutdown" | $HOME/bin/rofi.sh -sep "|" -dmenu -i -p '' -width 8 -lines 5)
 
