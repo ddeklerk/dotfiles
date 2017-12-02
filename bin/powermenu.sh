@@ -1,8 +1,9 @@
 #!/bin/bash
 
-res=$(echo "logout|reboot|shutdown" | $HOME/bin/rofi.sh -sep "|" -dmenu -i -p '' -width 8 -lines 3)
+res=$(echo "logout|suspend|hibernate|reboot|shutdown" | $HOME/bin/rofi.sh -sep "|" -dmenu -i -p '' -width 8 -lines 5)
 
-out() {
+logout() {
+	# Close all windows
 	for window_id in $(bspc query -W); do
 		bspc window $window_id -c
 	done
@@ -10,8 +11,20 @@ out() {
 }
 
 case $res in
-	"logout") out && exit;;
-	"reboot") systemctl reboot && exit;;
-	"shutdown") systemctl poweroff && exit;;
-	*)exit;;
+	"halt|poweroff|shutdown")
+		systemctl poweroff
+		;;
+	"hibernate")
+		systemctl hibernate
+		;;
+	"logout")
+		logout
+		;;
+	"restart|reboot")
+		systemctl reboot
+		;;
+	"suspend")
+		systemctl suspend
+		;;
+	*)
 esac
