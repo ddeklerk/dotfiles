@@ -13,19 +13,19 @@ logout() {
 }
 
 case $res in
-	"halt|poweroff|shutdown")
+	halt|poweroff|shutdown)
 		systemctl poweroff
 		;;
-	"hibernate")
+	hibernate)
 		systemctl hibernate
 		;;
-	"logout")
+	logout)
 		logout
 		;;
-	"restart|reboot")
+	restart|reboot)
 		systemctl reboot
 		;;
-	"suspend")
+	suspend)
 		systemctl suspend
 		;;
 	*)
