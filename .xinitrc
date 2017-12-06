@@ -23,12 +23,13 @@ else
 	dunst \
 		-lb "#$(getcolor.sh bg)" \
 		-lf "#$(getcolor.sh fg)" \
+		-lfr "#$(getcolor.sh fg)" \
 		-nb "#$(getcolor.sh bg)" \
-		-nf "#$(getcolor.sh 4)" \
+		-nf "#$(getcolor.sh fg)" \
+		-nfr "#$(getcolor.sh 4)" \
 		-cb "#$(getcolor.sh bg)" \
-		-cf "#$(getcolor.sh 1)" \
-		-frame_width 0 \
-		-sep_height 0 \
+		-cf "#$(getcolor.sh fg)" \
+		-cfr "#$(getcolor.sh 1)" \
 		&
 fi
 # Start compton
