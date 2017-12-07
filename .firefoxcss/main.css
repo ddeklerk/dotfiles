@@ -1,0 +1,229 @@
+@import url('./colors.css');
+@import url('./navbar/auto-hide.css');
+@import url('./navbar/borderless-fields.css');
+@import url('./navbar/sharpen-edges.css');
+@import url('./tabs/close-button-hover.css');
+@import url('./tabs/remove-borders.css');
+
+:root { 
+  --chrome-background-color: var(--xrdb-0) !important;
+  --chrome-color: var(--xrdb-fg) !important;
+  --chrome-nav-bar-controls-border-color: hsla(240, 5%, 5%, .3) !important;
+  --chrome-nav-bar-separator-color: rgba(0,0,0,.2) !important;
+  --chrome-nav-buttons-background: hsla(240, 5%, 5%, .1) !important;
+  --chrome-nav-buttons-hover-background: hsla(240, 5%, 5%, .15) !important;
+  --chrome-secondary-background-color: var(--xrdb-bg) !important;
+  --chrome-selection-background-color: var(--xrdb-fg) !important;
+  --chrome-selection-color: var(--xrdb-bg) !important;
+
+  --panel-separator-color: var(--xrdb-bg) !important;
+
+  --tab-line-color: var(--xrdb-4) !important;
+  --tabs-border: none !important;
+  --tabs-border: var(--xrdb-8) !important;
+
+  --toolbar-bgcolor: var(--toolbar-non-lwt-bgcolor) !important;
+  --toolbar-bgimage: var(--toolbar-non-lwt-bgimage) !important;
+  --toolbar-border-bottom-color: red !important;
+  --toolbar-color: var(--xrdb-fg) !important;
+  --toolbar-non-lwt-bgcolor: var(--xrdb-bg) !important;
+  --toolbar-non-lwt-bgimage: none !important;
+  --toolbar-non-lwt-textcolor: var(--xrdb-fg) !important;
+  --toolbarbutton-icon-fill-opacity: 1 !important;
+
+  --toolbox-border-bottom-color: hsla(240, 5%, 5%, .1) !important;
+
+  --url-and-searchbar-background-color: rgb(71, 71, 73) !important;
+  --url-and-searchbar-color: var(--chrome-color) !important;
+  --urlbar-separator-color: currentColor !important;
+}
+
+
+.toolbarbutton-animatable-box[brighttext],
+toolbar[brighttext] .toolbarbutton-animatable-box,
+toolbar[brighttext] .toolbarbutton-1 {
+  fill: rgb(249, 249, 250);
+}
+
+#urlbar ::-moz-selection,
+#navigator-toolbox .searchbar-textbox ::-moz-selection,
+.browserContainer > findbar ::-moz-selection {
+  background-color: var(--chrome-selection-background-color);
+  color: var(--chrome-selection-color);
+  box-shadow: none !important;
+}
+
+/* Change the base colors for the browser chrome */
+
+#TabsToolbar,
+#browser-panel {
+  background: var(--chrome-background-color);
+  color: var(--chrome-color);
+}
+
+#navigator-toolbox > toolbar:not(#TabsToolbar):not(#toolbar-menubar),
+.browserContainer > findbar,
+#browser-bottombox {
+  background-color: var(--chrome-secondary-background-color) !important;
+  background-image: none !important;
+  color: var(--chrome-color);
+}
+
+/* Default findbar text color doesn't look good - Bug 1125677 */
+.browserContainer > findbar .findbar-find-status,
+.browserContainer > findbar .found-matches,
+.browserContainer > findbar .findbar-button {
+  color: inherit;
+}
+
+/* URL bar and search bar*/
+#urlbar:not([focused="true"]),
+.searchbar-textbox:not([focused="true"]) {
+  border-color: var(--chrome-nav-bar-controls-border-color);
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+#urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity > #identity-icon-labels:-moz-lwtheme-brighttext {
+  color: #30e60b;
+}
+
+#urlbar-zoom-button:-moz-lwtheme-brighttext:hover {
+  background-color: rgba(255,255,255,.2);
+}
+
+#urlbar-zoom-button:-moz-lwtheme-brighttext:hover:active {
+  background-color: rgba(255,255,255,.3);
+}
+
+.tab-icon-sound[soundplaying],
+.tab-icon-sound[muted] {
+  filter: none !important; /* removes drop-shadow filter */
+}
+
+
+/* The menubar and tabs toolbar should match the devedition theme */
+#TabsToolbar,
+#toolbar-menubar {
+  -moz-appearance: none !important;
+  color: var(--xrdb-8) !important;
+}
+#main-menubar {
+  color: var(--chrome-color) !important;
+}
+#main-menubar > menu:not([open]) {
+  color: inherit !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+  color: var(--chrome-color) !important;
+}
+
+.tabbrowser-tab::after, .tabbrowser-tab::before {
+  border: none !important;
+}
+
+#urlbar, .searchbar-textbox {
+  border: none !important;
+  background-color: transparent !important;
+  color: var(--xrdb-fg) !important;
+}
+
+findbar {
+  color: var(--xrdb-fg) !important;
+}
+
+.findbar-find-previous, .findbar-find-next {
+  border: none !important;
+  background-color: var(--xrdb-bg) !important;
+  background-image: none !important;
+}
+
+.findbar-textbox {
+  border: none !important;
+  border-radius: 0 !important;
+  background-color: var(--xrdb-bg) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  color: var(--xrdb-fg) !important;
+}
+
+.findbar-button:hover {
+  background-color: inherit !important;
+}
+
+.findbar-button:hover .toolbarbutton-text {
+  background-color: var(--xrdb-7) !important;
+}
+
+.findbar-button[checked="true"] {
+  background: transparent !important;
+  color: var(--xrdb-bg) !important;
+}
+
+.findbar-button[checked="true"] .toolbarbutton-text {
+  background-color: var(--xrdb-fg) !important;
+}
+
+/*
+ * Originally from:
+ * http://forums.mozillazine.org/viewtopic.php?p=14404121#p14404121
+ */
+
+
+#urlbar[pageproxystate='valid'] #identity-box.chromeUI,
+#urlbar[pageproxystate='valid'] #identity-box.extensionPage {
+  color: var(--xrdb-4) !important;
+  --urlbar-separator-color: currentColor !important;
+}
+
+#urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity,
+#urlbar[pageproxystate='valid'] #identity-box.verifiedDomain,
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveBlocked {
+  color: var(--xrdb-2) !important;
+  --urlbar-separator-color: currentColor !important;
+}
+
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContent,
+#urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked,
+#urlbar[pageproxystate='valid'] #identity-box.certUserOverridden,
+#urlbar[pageproxystate='valid'] #identity-box.weakCipher {
+  color: var(--xrdb-3) !important;
+  --urlbar-separator-color: currentColor !important;
+}
+
+#urlbar[pageproxystate='valid'] #identity-box.unknownIdentity,
+#urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent,
+#urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms {
+  color: var(--xrdb-1) !important;
+  --urlbar-separator-color: currentColor !important;
+}
+
+#identity-icon-labels {
+  color: inherit !important;
+}
+
+#connection-icon {
+  fill: currentColor !important;
+}
+
+#sidebar-box {
+  color: inherit !important;
+  background-color: inherit !important;
+}
+
+
+#search-box {
+  background-color: var(--xrdb-bg) !important;
+  border: none !important;
+}
+
+@-moz-document 
+  url("chrome://browser/content/browser.xul"),
+  url("chrome://browser/content/bookmarks/bookmarksPanel.xul"),
+  url("chrome://browser/content/history/history-panel.xul") {
+    #sidebar, #sidebar-header, #bookmarksPanel, #bookmarks-view, #history-panel, #historyTree {
+      background: var(--chrome-background-color) !important;
+      color: var(--chrome-color) !important;
+    }
+}
