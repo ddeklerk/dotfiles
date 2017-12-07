@@ -243,3 +243,34 @@ findbar {
   background-image: none !important;
   background-color: var(--xrdb-4) !important;
 }
+
+/*
+ * Make borders transparent when not hovering over the navbar
+ */
+:root:not([customizing]) #navigator-toolbox:not(:hover),
+:root:not([customizing]) #navigator-toolbox:not(:focus-within) {
+  --tabs-border: transparent;
+}
+
+:root:not([customizing]) #navigator-toolbox:hover,
+:root:not([customizing]) #navigator-toolbox:focus-within {
+  --tabs-border: var(--xrdb-7);
+}
+
+/*
+ * Hide the tab close button when not hovering over the tabs
+ */
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: none !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: -moz-box !important;
+}
+
+/*
+ * Hide the newtab button
+ */
+.tabs-newtab-button {
+  display: none;
+}
