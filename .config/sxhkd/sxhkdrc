@@ -125,10 +125,10 @@ super + {Left,Down,Up,Right}
 #
 
 XF86Audio{Raise,Lower}Volume
-	amixer set Master 1%{+,-}
+	[ -x $HOME/bin/volume.sh ] && $HOME/bin/volume.sh {+,-} || amixer set Master 1%{+,-}
 
 XF86AudioMute
-	amixer get Master | grep "\[on\]" && amixer set Master mute || amixer set Master unmute
+	[ -x $HOME/bin/volume.sh ] && $HOME/bin/volume.sh toggle || amixer set Master toggle
 
 #
 # Powermenu
