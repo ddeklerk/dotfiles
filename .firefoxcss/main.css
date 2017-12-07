@@ -30,7 +30,6 @@
   --panel-separator-color: var(--xrdb-bg) !important;
 
   --tab-line-color: var(--xrdb-4) !important;
-  --tabs-border: none !important;
   --tabs-border: var(--xrdb-8) !important;
 
   --toolbar-bgcolor: var(--toolbar-non-lwt-bgcolor) !important;
@@ -273,4 +272,8 @@ findbar {
  */
 .tabs-newtab-button {
   display: none;
+}
+
+.tab-line {
+  height: .2em !important;
 }
