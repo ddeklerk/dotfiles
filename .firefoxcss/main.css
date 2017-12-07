@@ -238,3 +238,8 @@ findbar {
       color: var(--chrome-color) !important;
     }
 }
+
+.tab-content[pinned][titlechanged]:not([selected="true"]) {
+  background-image: none !important;
+  background-color: var(--xrdb-4) !important;
+}
