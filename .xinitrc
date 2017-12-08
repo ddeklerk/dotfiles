@@ -19,6 +19,7 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 # Start dunst
 if ! [ -x "$(command -v getcolor.sh)" ]; then
 	dunst &
+	hsetroot -solid "#838383"
 else
 	dunst \
 		-lb "#$(getcolor.sh bg)" \
@@ -31,6 +32,7 @@ else
 		-cf "#$(getcolor.sh fg)" \
 		-cfr "#$(getcolor.sh 1)" \
 		&
+	hsetroot -solid "#$(getcolor.sh 8)"
 fi
 # Start compton
 compton &
