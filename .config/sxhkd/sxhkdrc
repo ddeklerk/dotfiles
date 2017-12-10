@@ -142,7 +142,7 @@ super + shift + Escape
 
 # Screen brightness
 XF86MonBrightness{Up,Down}
-	light {-A,-U} 5
+	[ -x $HOME/bin/backlight.sh ] && $HOME/bin/backlight.sh {+,-} || light {-A,-U} 5
 
 # Media player controls
 XF86Audio{Play,Pause,Next,Prev}
