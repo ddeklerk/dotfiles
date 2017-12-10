@@ -147,3 +147,7 @@ XF86MonBrightness{Up,Down}
 # Media player controls
 XF86Audio{Play,Pause,Next,Prev}
 	playerctl {play-pause,pause,next,previous}
+
+# Time notification
+super + XF86PowerOff
+	notify-send "`date`"
