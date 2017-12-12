@@ -24,9 +24,6 @@ set hidden
 
 set backupcopy=yes
 
-" Use italic font for comments
-highlight Comment cterm=italic
-
 " Automatically reload .vimrc when saved
 if has("autocmd")
 	autocmd bufwritepost .vimrc source $MYVIMRC
