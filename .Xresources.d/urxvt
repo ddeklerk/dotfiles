@@ -1,3 +1,7 @@
-URxvt.cursorBlink: true
-URxvt.font: xft:DejaVu Sans Mono:size=9
-URxvt.scrollBar: false
+urxvt.cursorBlink: true
+urxvt.scrollBar: false
+
+urxvt*font: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+urxvt*boldFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*
+urxvt*italicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+urxvt*bolditalicFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*

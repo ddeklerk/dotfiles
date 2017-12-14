@@ -13,6 +13,9 @@ sysmodmap=/etc/X11/xinit/.Xmodmap
 [ -f "$userresources" ] && xrdb -merge "$userresources"
 [ -f "$usermodmap" ] && xmodmap "$usermodmap"
 
+# Font stuff
+xset +fp $HOME/.local/share/fonts
+
 # Set caps to escape
 [ -x "$(command -v xcape)" ] && xcape -e 'Caps_Lock=Escape' &
 
