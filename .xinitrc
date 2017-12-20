@@ -38,6 +38,9 @@ fi
 # Start compton
 compton &
 
+# Start redshift
+redshift &
+
 hsetroot -solid "#565656"
 
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d
