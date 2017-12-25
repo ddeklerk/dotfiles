@@ -41,9 +41,10 @@ compton &
 # Start redshift
 redshift &
 
-hsetroot -solid "#565656"
+# Set background
+[ -x "$HOME/.fehbg" ] && . $HOME/.fehfg
 
-[ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d
+[ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
 
 xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
