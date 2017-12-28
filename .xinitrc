@@ -41,8 +41,8 @@ compton &
 # Start redshift
 redshift &
 
-# Set background
-[ -x "$HOME/.fehbg" ] && . $HOME/.fehfg
+# Start dropbox
+dropbox-cli start &
 
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
 
