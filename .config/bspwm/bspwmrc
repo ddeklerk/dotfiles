@@ -8,3 +8,6 @@ bspc config window_gap          12
 
 bspc config focused_border_color "#$(getcolor.sh fg)"
 bspc config normal_border_color "#$(getcolor.sh bg)"
+
+# Make Zathura tiled. For some reason it starts up in floating mode otherwise
+bspc rule -a Zathura state=tiled
