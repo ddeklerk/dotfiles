@@ -244,16 +244,10 @@ findbar {
 }
 
 /*
- * Make borders transparent when not hovering over the navbar
+ * Make borders transparent
  */
-:root:not([customizing]) #navigator-toolbox:not(:hover),
-:root:not([customizing]) #navigator-toolbox:not(:focus-within) {
-  --tabs-border: transparent;
-}
-
-:root:not([customizing]) #navigator-toolbox:hover,
-:root:not([customizing]) #navigator-toolbox:focus-within {
-  --tabs-border: var(--xrdb-7);
+:root:not([customizing]) #navigator-toolbox {
+	--tabs-border: transparent;
 }
 
 /*
