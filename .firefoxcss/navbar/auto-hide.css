@@ -41,23 +41,37 @@
   padding-top:0 !important;
   padding-bottom:0 !important;
   opacity: 0;
+
+  transition: all 0;
+  transition-property: max-height, opacity;
 }
 
 :root:not([customizing]) :hover > #nav-bar,
 :root:not([customizing]) #nav-bar:focus-within {
   max-height: var(--nav-bar-height);
   opacity: 1;
-  transition: opacity 0.15s ease-in, max-height 0.15s linear;
+  /* transition: opacity 0.15s ease-in, max-height 0.15s linear; */
+}
+
+:root:not([customizing]) :hover > #nav-bar {
+  transition-delay: 500ms;
 }
 
 :root:not([customizing]) #navigator-toolbox {
   max-height: calc(var(--tabbar-height) + var(--trigger-area-height) + var(--extra-height));
   min-height: var(--tabbar-height);
   margin-bottom: calc(-1 * var(--trigger-area-height));
+
+  transition-property: max-height, margin-bottom;
+  transition: all 0;
 }
 
 :root:not([customizing]) #navigator-toolbox:hover,
 :root:not([customizing]) #navigator-toolbox:focus-within {
   max-height: calc(var(--tabbar-height) + var(--nav-bar-height) + var(--extra-height));
   margin-bottom: calc(1px - var(--nav-bar-height));
+}
+
+:root:not([customizing]) #navigator-toolbox:hover {
+  transition-delay: 500ms;
 }
