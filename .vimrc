@@ -1,3 +1,10 @@
+" Essential.vim
+set nocompatible
+filetype plugin on
+
+" Enable the matchit plugin to jump between matching keywords
+runtime macros/matchit.vim
+
 " Start the plugin manager
 call plug#begin()
 
@@ -6,10 +13,7 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-set autoindent
-filetype plugin indent on
-syntax enable
-
+" Set the colorscheme
 colorscheme gruvbox
 
 nmap <leader>l :set list!<CR>
@@ -19,12 +23,20 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
-
+ 
 set hidden
-
+ 
 set backupcopy=yes
 
 " Automatically reload .vimrc when saved
 if has("autocmd")
 	autocmd bufwritepost .vimrc source $MYVIMRC
 endif
+
+nnoremap <silent> [b :bprevious<CR>
+nnoremap <silent> ]b :bnext<CR>
+nnoremap <silent> [B :bfirst<CR>
+nnoremap <silent> ]B :blast<CR>
+
+" When typing %%, expand to the path of the active buffer
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
