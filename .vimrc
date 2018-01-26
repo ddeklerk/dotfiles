@@ -1,6 +1,7 @@
 " Start the plugin manager
 call plug#begin()
 
+Plug 'mattn/emmet-vim'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
