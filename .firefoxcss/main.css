@@ -10,11 +10,11 @@
  */
 
 @import url('./colors.css');
-@import url('./navbar/auto-hide.css');
+/* @import url('./navbar/auto-hide.css');
 @import url('./navbar/borderless-fields.css');
 @import url('./navbar/sharpen-edges.css');
 @import url('./tabs/close-button-hover.css');
-@import url('./tabs/remove-borders.css');
+@import url('./tabs/remove-borders.css'); */
 
 :root { 
   --chrome-background-color: var(--xrdb-0) !important;
@@ -48,6 +48,9 @@
   --urlbar-separator-color: currentColor !important;
 }
 
+* {
+  font: 11px "Gohu Gohufont" !important;
+}
 
 .toolbarbutton-animatable-box[brighttext],
 toolbar[brighttext] .toolbarbutton-animatable-box,
@@ -250,6 +253,10 @@ findbar {
 	--tabs-border: transparent;
 }
 
+:root:not([customizing]) #nav-bar {
+  --tabs-border-color: transparent;
+}
+
 /*
  * Hide the tab close button when not hovering over the tabs
  */
@@ -270,4 +277,11 @@ findbar {
 
 .tab-line {
   height: .2em !important;
+}
+
+/*
+ * Make favicons of inactive tabs greyscale
+ */
+.tabbrowser-tab:not([selected="true"]) .tab-icon-image {
+ filter: grayscale(100%) contrast(50%) !important;
 }
