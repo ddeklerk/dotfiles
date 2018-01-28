@@ -2,7 +2,7 @@
  * Usage:
  * First create a userChrome.css file in ~/.mozilla/firefox/[id]/chrome/
  * Then add the following snippet to that file:
- *		@import url('file:///home/[username]/.firefoxcss/main.css
+ *		@import url('file:///home/[username]/.firefoxcss/main.css');
  * Save the file
  * In order to generate the css variables containing the colors do
  *		./xrdbtocss.sh > colors.css
