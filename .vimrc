@@ -40,3 +40,6 @@ nnoremap <silent> ]B :blast<CR>
 
 " When typing %%, expand to the path of the active buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
+" Allow saving of files as sudo when I forgot to start vim using sudo
+cmap w!! w !sudo tee > /dev/null %
