@@ -44,6 +44,7 @@ redshift &
 # Start dropbox
 dropbox-cli start &
 
+[ -x "$HOME/bin/panel.sh" ] && $HOME/bin/panel.sh & > /dev/null
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
 
 xsetroot -cursor_name left_ptr
