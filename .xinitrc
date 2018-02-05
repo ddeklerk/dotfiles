@@ -2,6 +2,8 @@
 #
 # ~/.xinitrc
 
+# TODO: move wm-specific stuff to bspwmrc?
+
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
@@ -23,6 +25,8 @@ xset +fp $HOME/.local/share/fonts
 if ! [ -x "$(command -v getcolor.sh)" ]; then
 	dunst &
 else
+	hsetroot -solid \#$(getcolor.sh 7)
+
 	dunst \
 		-lb "#$(getcolor.sh bg)" \
 		-lf "#$(getcolor.sh fg)" \
