@@ -9,15 +9,40 @@ plus="+"
 
 [ -p "$PANEL_FIFO" ] || mkfifo "$PANEL_FIFO";
 
+
+# ========================================
+# Output to th efifo
+# ========================================
+
+# BSPWM workspaces
 bspc subscribe report > "$PANEL_FIFO" &
 
+# Time
 while true
 do
 	date "+C%H:%M"
 	sleep 1
 done > "$PANEL_FIFO" &
 
-# ./panel_bar.sh < "$PANEL_FIFO" | lemonbar -n "$PANEL_WM_NAME" -g x$PANEL_HEIGHT -f "$PANEL_FONT"
+# Battery status
+
+# Get battery name
+BATN=$(ls /sys/class/power_supply/ | grep BAT)
+if [ -n "$BATN" ] && [ -x "$(command -v getcolor.sh)" ]
+then
+	while true
+	do
+		echo "B$(battery.sh)"
+		sleep 30
+	done > "$PANEL_FIFO" &
+fi
+
+# Exit if no battery available
+test -z "$BATN" && exit 1
+
+# ========================================
+# Parse the output of the fifo
+# ========================================
 
 num_mon=$(bspc query -M | wc -l)
 
@@ -33,6 +58,9 @@ geometry="${width}x${PANEL_HEIGHT}+${xoff}+${yoff}"
 while read -r line
 do
 	case $line in
+		B*)
+			bat="%{F${FG}}%{B${BG}} ${line#?} %{F-}%{B-}"
+			;;
 		C*)
 			clock="%{F${FG}}%{B${BG}} ${line#?} %{F-}%{B-}"
 			;;
@@ -106,5 +134,5 @@ do
 			done
 			;;
 	esac
-	printf "%s\n" "%{c}${wm}%{r}${clock}"
+	printf "%s\n" "%{c}${wm}%{r}${bat}${clock}"
 done < "$PANEL_FIFO" | lemonbar -n "$PANEL_WM_NAME" -g "$geometry" -f "$PANEL_FONT"
