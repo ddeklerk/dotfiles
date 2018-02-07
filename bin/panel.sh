@@ -134,5 +134,5 @@ do
 			done
 			;;
 	esac
-	printf "%s\n" "%{c}${wm}%{r}${bat}${clock}"
+	printf "%s\n" "%{c}${wm}%{r}${bat} ${clock}"
 done < "$PANEL_FIFO" | lemonbar -n "$PANEL_WM_NAME" -g "$geometry" -f "$PANEL_FONT"
