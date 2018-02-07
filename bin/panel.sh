@@ -7,6 +7,7 @@ dash="-"
 mult="×"
 plus="+"
 
+# Create the fifo, if it doesn't already exist
 [ -p "$PANEL_FIFO" ] || mkfifo "$PANEL_FIFO";
 
 
@@ -36,9 +37,6 @@ then
 		sleep 30
 	done > "$PANEL_FIFO" &
 fi
-
-# Exit if no battery available
-test -z "$BATN" && exit 1
 
 # ========================================
 # Parse the output of the fifo
