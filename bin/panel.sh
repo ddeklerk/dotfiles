@@ -1,7 +1,5 @@
 #!/bin/bash
 
-trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
-
 dot="·"
 dash="-"
 mult="×"
