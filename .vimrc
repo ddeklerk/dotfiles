@@ -8,13 +8,12 @@ runtime macros/matchit.vim
 " Start the plugin manager
 call plug#begin()
 
-Plug 'mattn/emmet-vim'
-Plug 'morhetz/gruvbox'
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()
 
 " Set the colorscheme
-colorscheme gruvbox
+colo nord
 
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:·,precedes:←,extends:→,nbsp:␣
