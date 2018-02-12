@@ -52,6 +52,10 @@
   font: 11px "Gohu Gohufont" !important;
 }
 
+.tab-background {
+  border-top: none !important;;
+}
+
 .toolbarbutton-animatable-box[brighttext],
 toolbar[brighttext] .toolbarbutton-animatable-box,
 toolbar[brighttext] .toolbarbutton-1 {
