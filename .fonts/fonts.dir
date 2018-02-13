@@ -1,4 +1,4 @@
-9
+10
 gohufont-11.pcf.gz -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso8859-1
 gohufont-11b.pcf.gz -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso8859-1
 gohufont-14.pcf.gz -gohu-gohufont-medium-r-normal--14-100-100-100-c-80-iso8859-1
@@ -7,4 +7,5 @@ gohufont-uni-11.pcf.gz -gohu-gohufont-medium-r-normal--11-80-100-100-c-60-iso106
 gohufont-uni-11b.pcf.gz -gohu-gohufont-bold-r-normal--11-80-100-100-c-60-iso10646-1
 gohufont-uni-14.pcf.gz -gohu-gohufont-medium-r-normal--14-100-100-100-c-80-iso10646-1
 gohufont-uni-14b.pcf.gz -gohu-gohufont-bold-r-normal--14-100-100-100-c-80-iso10646-1
+scientifica-11.bdf -nerdypepper-scientifica-medium-r-normal--11-80-100-100-c-50-iso10646-1
 siji.pcf -wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
