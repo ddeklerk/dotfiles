@@ -3,4 +3,4 @@ rofi.hide-scrollbar: true
 rofi.matching: fuzzy
 rofi.modi: drun,run,window,ssh
 rofi.separator-style: none
-rofi.font: Gohu\ Gohufont\ 11
+rofi.font: Gohu\ Gohufont\ 8
