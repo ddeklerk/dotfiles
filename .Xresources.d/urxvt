@@ -1,5 +1,6 @@
 urxvt.cursorBlink: true
 urxvt.scrollBar: false
+urxvt.fading: 0
 
 urxvt*font: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
 urxvt*boldFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*
