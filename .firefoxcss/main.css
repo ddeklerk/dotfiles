@@ -17,7 +17,7 @@
 @import url('./tabs/remove-borders.css'); */
 
 :root { 
-  --chrome-background-color: var(--xrdb-0) !important;
+  --chrome-background-color: var(--xrdb-bg) !important;
   --chrome-color: var(--xrdb-fg) !important;
   --chrome-nav-bar-controls-border-color: hsla(240, 5%, 5%, .3) !important;
   --chrome-nav-bar-separator-color: rgba(0,0,0,.2) !important;
