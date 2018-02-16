@@ -57,8 +57,8 @@ addregex notification-bg             $(getcolor.sh 0)	# black
 addregex notification-fg             $(getcolor.sh 4)	# blue
 
 #FFFFFF
-addregex recolor-darkcolor           $(getcolor.sh 15)	# grey light
+addregex recolor-darkcolor           $(getcolor.sh fg)	# grey light
 #000000
-addregex recolor-lightcolor          $(getcolor.sh 0)	# black
+addregex recolor-lightcolor          $(getcolor.sh bg)	# black
 
 sed -i -E "$sub" $zathurarc
