@@ -49,6 +49,8 @@ redshift &
 # Start dropbox
 dropbox-cli start &
 
+unclutter &
+
 [ -x "$HOME/bin/panel.sh" ] && $HOME/bin/panel.sh & > /dev/null
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
 
