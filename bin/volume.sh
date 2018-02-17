@@ -1,5 +1,8 @@
 #!/bin/bash
 
+on=\\ue04e
+off=\\ue04f
+
 # Take the first argument
 command=$1
 # Shift the arguments so we can process the rest
@@ -11,11 +14,11 @@ m=Master
 i=${1:-1}
 
 level() {
-    amixer get $m | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
+	amixer get $m | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
 }
 
 state() {
-    amixer get $m | sed -n 's/^.*\[\(o[nf]\+\)]$/\1/p' | uniq
+	amixer get $m | sed -n 's/^.*\[\(o[nf]\+\)]$/\1/p' | uniq
 }
 
 case $command in
@@ -25,4 +28,10 @@ case $command in
 	*) amixer set $m $1 >/dev/null;;
 esac
 
-notify-send "Volume `state`" -h int:value:`level`
+if [ `state` = "on" ]; then
+	icon=$on
+else
+	icon=$off
+fi
+
+echo -e "$icon $(level)" | pop.sh -n "volume" -c h -a c -d .5
