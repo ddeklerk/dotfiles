@@ -52,6 +52,7 @@ dropbox-cli start &
 unclutter &
 
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
+[ -x "$HOME/bin/wm.sh" ] && $HOME/bin/wm.sh & > /dev/null
 
 xsetroot -cursor_name left_ptr
 sxhkd -m 1 &
