@@ -1,5 +1,7 @@
 #!/bin/bash
 
+icon=\\ue1c3
+
 # Take the first argument
 command=$1
 # Shift the arguments so we can process the rest
@@ -20,4 +22,4 @@ case $command in
 	*) light -S $1 >/dev/null;;
 esac
 
-notify-send "Brightness" -h int:value:`level`
+echo -e "$icon $(level)" | pop.sh -n "brightness" -c h -a c -d .5
