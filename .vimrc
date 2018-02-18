@@ -45,3 +45,6 @@ cmap w!! w !sudo tee > /dev/null %
 
 " Clear and redraw the screen, and mute search highlighting
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+set hlsearch
+set incsearch
