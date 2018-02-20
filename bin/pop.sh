@@ -40,7 +40,7 @@ while getopts "a:c:d:h:n:w:x:y:" opt; do
 done
 
 if [ -n "$center" ]; then
-	resolution=$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')
+	resolution=$(xrandr --current | grep \* | awk '{print $1}')
 	monitor_width=$(echo $resolution | cut -d 'x' -f 1)
 	monitor_height=$(echo $resolution | cut -d 'x' -f 2)
 	case $center in
