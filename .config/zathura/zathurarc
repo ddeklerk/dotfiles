@@ -1,8 +1,8 @@
-set default-bg                  \#3B4252
-set default-fg                  \#ECEFF4
+set default-bg                  \#2E3440
+set default-fg                  \#D8DEE9
 
 set statusbar-fg                \#ECEFF4
-set statusbar-bg                \#3B4252
+set statusbar-bg                \#2E3440
 
 set inputbar-bg                 \#3B4252
 set inputbar-fg                 \#ECEFF4
@@ -11,7 +11,7 @@ set notification-error-bg       \#3B4252
 set notification-error-fg       \#BF616A
 
 set notification-warning-bg     \#3B4252
-set notification-warning-fg     \#EBCB8B
+set notification-warning-fg     \#2E3440
 
 set highlight-color             \#3B4252
 set highlight-active-color      \#ECEFF4
@@ -19,14 +19,14 @@ set highlight-active-color      \#ECEFF4
 set completion-highlight-fg     \#E5E9F0
 set completion-highlight-bg     \#3B4252
 
-set completion-bg               \#E5E9F0
-set completion-fg               \#ECEFF4
+set completion-bg               \#4C566A
+set completion-fg               \#D8DEE9
 
 set notification-bg             \#3B4252
-set notification-fg             \#81A1C1
+set notification-fg             \#2E3440
 
-set recolor-lightcolor          \#3B4252
-set recolor-darkcolor           \#ECEFF4
+set recolor-lightcolor          \#2E3440
+set recolor-darkcolor           \#D8DEE9
 set recolor			"true"
 
 # setting recolor-keep true will keep any color your pdf has.
