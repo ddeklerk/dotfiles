@@ -9,6 +9,7 @@ runtime macros/matchit.vim
 call plug#begin()
 
 Plug 'chriskempson/base16-vim'
+Plug 'wikitopian/hardmode'
 
 call plug#end()
 
@@ -53,3 +54,9 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 set hlsearch
 set incsearch
+
+" Hardmode
+" Enable it by default
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" Toggle hardmode
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
