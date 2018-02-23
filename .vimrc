@@ -8,12 +8,17 @@ runtime macros/matchit.vim
 " Start the plugin manager
 call plug#begin()
 
-Plug 'arcticicestudio/nord-vim'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
 " Set the colorscheme
-colo nord
+colo base16-tomorrow-dark
+if filereadable(expand("~/.vimrc_background"))
+	let base16colorspace=256
+	source ~/.vimrc_background
+endif
+
 
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:·,precedes:←,extends:→,nbsp:␣
