@@ -289,3 +289,8 @@ findbar {
 .tabbrowser-tab:not([selected="true"]) .tab-icon-image {
  filter: grayscale(100%) contrast(50%) !important;
 }
+
+#urlbar {
+	/* Place bindings.xml in the same folder as userChrome.css */
+	-moz-binding: url("bindings.xml#urlbar") !important;
+}
