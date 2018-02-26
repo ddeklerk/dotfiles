@@ -14,12 +14,10 @@ Plug 'wikitopian/hardmode'
 call plug#end()
 
 " Set the colorscheme
-colo base16-tomorrow-dark
 if filereadable(expand("~/.vimrc_background"))
 	let base16colorspace=256
 	source ~/.vimrc_background
 endif
-
 
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:·,precedes:←,extends:→,nbsp:␣
