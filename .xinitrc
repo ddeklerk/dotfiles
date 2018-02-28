@@ -47,7 +47,7 @@ compton &
 redshift &
 
 # Start dropbox
-dropbox-cli start &
+dropbox &> /dev/null &
 
 unclutter &
 
