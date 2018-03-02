@@ -26,20 +26,15 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set noexpandtab
- 
+
 set hidden
- 
+
 set backupcopy=yes
 
 " Automatically reload .vimrc when saved
 if has("autocmd")
 	autocmd bufwritepost .vimrc source $MYVIMRC
 endif
-
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
 
 " When typing %%, expand to the path of the active buffer
 cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
@@ -64,8 +59,8 @@ xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
 
 function! s:VSetSearch(cmdtype)
-  let temp = @s
-  norm! gv"sy
-  let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
-  let @s = temp
+	let temp = @s
+	norm! gv"sy
+	let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
+	let @s = temp
 endfunction
