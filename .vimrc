@@ -1,18 +1,10 @@
 " Essential.vim
 set nocompatible
 filetype plugin on
+syntax on
 
 " Enable the matchit plugin to jump between matching keywords
 runtime macros/matchit.vim
-
-" Start the plugin manager
-call plug#begin()
-
-Plug 'chriskempson/base16-vim'
-Plug 'godlygeek/tabular'
-Plug 'takac/vim-hardtime'
-
-call plug#end()
 
 " Set the colorscheme
 if filereadable(expand("~/.vimrc_background"))
