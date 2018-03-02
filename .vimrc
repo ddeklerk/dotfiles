@@ -9,6 +9,7 @@ runtime macros/matchit.vim
 call plug#begin()
 
 Plug 'chriskempson/base16-vim'
+Plug 'godlygeek/tabular'
 Plug 'wikitopian/hardmode'
 
 call plug#end()
