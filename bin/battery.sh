@@ -50,7 +50,10 @@ deam() {
 BATN=$(ls /sys/class/power_supply/ | grep BAT)
 
 # Exit if no battery available
-test -z "$BATN" && exit 1
+if [ -z "$BATN" ]; then
+	echo "No battery found" 1>&2
+	exit 1
+fi
 
 # Get battery level and status (charging or not)
 getbat() {
