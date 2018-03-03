@@ -10,35 +10,30 @@
  */
 
 @import url('./colors.css');
-/* @import url('./navbar/auto-hide.css');
-@import url('./navbar/borderless-fields.css');
-@import url('./navbar/sharpen-edges.css');
-@import url('./tabs/close-button-hover.css');
-@import url('./tabs/remove-borders.css'); */
 
 :root { 
-  --chrome-background-color: var(--xrdb-bg) !important;
-  --chrome-color: var(--xrdb-fg) !important;
+  --chrome-background-color: var(--background) !important;
+  --chrome-color: var(--foreground) !important;
   --chrome-nav-bar-controls-border-color: hsla(240, 5%, 5%, .3) !important;
   --chrome-nav-bar-separator-color: rgba(0,0,0,.2) !important;
   --chrome-nav-buttons-background: hsla(240, 5%, 5%, .1) !important;
   --chrome-nav-buttons-hover-background: hsla(240, 5%, 5%, .15) !important;
-  --chrome-secondary-background-color: var(--xrdb-bg) !important;
-  --chrome-selection-background-color: var(--xrdb-fg) !important;
-  --chrome-selection-color: var(--xrdb-bg) !important;
+  --chrome-secondary-background-color: var(--background) !important;
+  --chrome-selection-background-color: var(--foreground) !important;
+  --chrome-selection-color: var(--background) !important;
 
-  --panel-separator-color: var(--xrdb-bg) !important;
+  --panel-separator-color: var(--background) !important;
 
-  --tab-line-color: var(--xrdb-4) !important;
-  --tabs-border: var(--xrdb-8) !important;
+  --tab-line-color: var(--color4) !important;
+  --tabs-border: var(--color8) !important;
 
   --toolbar-bgcolor: var(--toolbar-non-lwt-bgcolor) !important;
   --toolbar-bgimage: var(--toolbar-non-lwt-bgimage) !important;
   --toolbar-border-bottom-color: red !important;
-  --toolbar-color: var(--xrdb-fg) !important;
-  --toolbar-non-lwt-bgcolor: var(--xrdb-bg) !important;
+  --toolbar-color: var(--foreground) !important;
+  --toolbar-non-lwt-bgcolor: var(--background) !important;
   --toolbar-non-lwt-bgimage: none !important;
-  --toolbar-non-lwt-textcolor: var(--xrdb-fg) !important;
+  --toolbar-non-lwt-textcolor: var(--foreground) !important;
   --toolbarbutton-icon-fill-opacity: 1 !important;
 
   --toolbox-border-bottom-color: hsla(240, 5%, 5%, .1) !important;
@@ -123,7 +118,7 @@ toolbar[brighttext] .toolbarbutton-1 {
 #TabsToolbar,
 #toolbar-menubar {
   -moz-appearance: none !important;
-  color: var(--xrdb-8) !important;
+  color: var(--color8) !important;
 }
 #main-menubar {
   color: var(--chrome-color) !important;
@@ -143,26 +138,26 @@ toolbar[brighttext] .toolbarbutton-1 {
 #urlbar, .searchbar-textbox {
   border: none !important;
   background-color: transparent !important;
-  color: var(--xrdb-fg) !important;
+  color: var(--foreground) !important;
 }
 
 findbar {
-  color: var(--xrdb-fg) !important;
+  color: var(--foreground) !important;
 }
 
 .findbar-find-previous, .findbar-find-next {
   border: none !important;
-  background-color: var(--xrdb-bg) !important;
+  background-color: var(--background) !important;
   background-image: none !important;
 }
 
 .findbar-textbox {
   border: none !important;
   border-radius: 0 !important;
-  background-color: var(--xrdb-bg) !important;
+  background-color: var(--background) !important;
   outline: none !important;
   box-shadow: none !important;
-  color: var(--xrdb-fg) !important;
+  color: var(--foreground) !important;
 }
 
 .findbar-button:hover {
@@ -170,16 +165,16 @@ findbar {
 }
 
 .findbar-button:hover .toolbarbutton-text {
-  background-color: var(--xrdb-7) !important;
+  background-color: var(--color7) !important;
 }
 
 .findbar-button[checked="true"] {
   background: transparent !important;
-  color: var(--xrdb-bg) !important;
+  color: var(--background) !important;
 }
 
 .findbar-button[checked="true"] .toolbarbutton-text {
-  background-color: var(--xrdb-fg) !important;
+  background-color: var(--foreground) !important;
 }
 
 /*
@@ -190,14 +185,14 @@ findbar {
 
 #urlbar[pageproxystate='valid'] #identity-box.chromeUI,
 #urlbar[pageproxystate='valid'] #identity-box.extensionPage {
-  color: var(--xrdb-4) !important;
+  color: var(--color4) !important;
   --urlbar-separator-color: currentColor !important;
 }
 
 #urlbar[pageproxystate='valid'] #identity-box.verifiedIdentity,
 #urlbar[pageproxystate='valid'] #identity-box.verifiedDomain,
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveBlocked {
-  color: var(--xrdb-2) !important;
+  color: var(--color2) !important;
   --urlbar-separator-color: currentColor !important;
 }
 
@@ -205,14 +200,14 @@ findbar {
 #urlbar[pageproxystate='valid'] #identity-box.mixedDisplayContentLoadedActiveBlocked,
 #urlbar[pageproxystate='valid'] #identity-box.certUserOverridden,
 #urlbar[pageproxystate='valid'] #identity-box.weakCipher {
-  color: var(--xrdb-3) !important;
+  color: var(--color3) !important;
   --urlbar-separator-color: currentColor !important;
 }
 
 #urlbar[pageproxystate='valid'] #identity-box.unknownIdentity,
 #urlbar[pageproxystate='valid'] #identity-box.mixedActiveContent,
 #urlbar[pageproxystate='valid'] #identity-box.insecureLoginForms {
-  color: var(--xrdb-1) !important;
+  color: var(--color1) !important;
   --urlbar-separator-color: currentColor !important;
 }
 
@@ -231,7 +226,7 @@ findbar {
 
 
 #search-box {
-  background-color: var(--xrdb-bg) !important;
+  background-color: var(--background) !important;
   border: none !important;
 }
 
@@ -247,7 +242,7 @@ findbar {
 
 .tab-content[pinned][titlechanged]:not([selected="true"]) {
   background-image: none !important;
-  background-color: var(--xrdb-4) !important;
+  background-color: var(--color4) !important;
 }
 
 /*
@@ -293,4 +288,48 @@ findbar {
 #urlbar {
 	/* Place bindings.xml in the same folder as userChrome.css */
 	-moz-binding: url("bindings.xml#urlbar") !important;
+}
+
+
+
+#urlbar-container {
+  text-align: center;
+}
+
+#identity-box {
+  border: none !important;
+}
+
+#identity-icon-labels {
+  display: none !important;
+}
+
+/* Forwards, back, home, bookmarks, sidebar… */
+.chromeclass-toolbar-additional {
+  display: none;
+}
+
+/* Url three dots, Pocket, bookmark star… */
+#page-action-buttons {
+  display: none;
+}
+
+/* hamburger menu */
+#PanelUI-button {
+  border: none !important;
+}
+
+/* Condens tabs */
+:root {
+  --tab-min-height: 22px !important;
+}
+
+.tabbrowser-tab {
+/*   border: 1px solid red !impotant; */
+  max-height: var(--tab-min-height) !important;
+}
+
+/* Make pinned tabs smaller */
+.tab-content[pinned] {
+  padding: 0 6px !important;
 }
