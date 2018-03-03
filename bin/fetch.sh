@@ -13,11 +13,11 @@ fi
 cat <<EOF
 
 ${USER}@${hostname}
-OS: ${os}
-KERNEL: ${kernel}
-UPTIME: ${uptime}
+OS:       ${os}
+KERNEL:   ${kernel}
+UPTIME:   ${uptime}
 PACKAGES: ${packages}
-SHELL: ${shell}
-WM: ${WM}
+SHELL:    ${shell}
+WM:       ${WM}
 
 EOF
