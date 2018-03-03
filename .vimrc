@@ -1,6 +1,6 @@
 " Essential.vim
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 syntax on
 
 " Enable the matchit plugin to jump between matching keywords
