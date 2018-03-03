@@ -14,7 +14,6 @@ while read -r line
 do
 	case $line in
 		desktop*)
-
 			wm=""
 			num_mon=$(bspc query -M | wc -l)
 
@@ -66,11 +65,7 @@ do
 				esac
 				shift
 			done
-			echo -e "%{c}${wm}" | pop.sh \
-				-a c \
-				-c h \
-				-d 0.5 \
-				-n "wmlistener"
+			notify-send -t 500 "$(echo -e ${wm})"
 			;;
 	esac
 done < "$WM_FIFO"

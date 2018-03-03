@@ -34,4 +34,4 @@ else
 	icon=$off
 fi
 
-echo -e "$icon $(level)" | pop.sh -n "volume" -c h -a c -d .5
+notify-send "Volume" "$(echo -e ${icon})" -h int:value:`level` -t 500

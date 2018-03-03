@@ -22,4 +22,4 @@ case $command in
 	*) light -S $1 >/dev/null;;
 esac
 
-echo -e "$icon $(level)" | pop.sh -n "brightness" -c h -a c -d .5
+notify-send "Brightness" "$(echo -e ${icon})" -h int:value:`level` -t 500
