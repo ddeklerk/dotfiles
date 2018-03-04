@@ -6,5 +6,4 @@ urxvt*font: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
 urxvt*boldFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*
 urxvt*italicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
 urxvt*bolditalicFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*
-iso14755: false
-iso14755_52: false
+
