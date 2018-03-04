@@ -5,8 +5,8 @@ free="\ue130" # Regular square
 
 WM_FIFO=/tmp/wm-fifo
 
-# Create teh fifo, if it doesn't already exist
-[ -p "$WM_FIFO" ] || mkfifo "$WM_FIFO"
+[ -e "$WM_FIFO" ] && rm "$WM_FIFO"
+mkfifo "$WM_FIFO"
 
 bspc subscribe desktop > "$WM_FIFO" &
 
