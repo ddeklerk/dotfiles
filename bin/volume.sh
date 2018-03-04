@@ -34,4 +34,4 @@ else
 	icon=$off
 fi
 
-notify-send "Volume" "$(echo -e ${icon})" -h int:value:`level` -t 500
+notify-send "Volume" "$(echo -e ${icon})" -h int:value:`level` -t 500 -u low

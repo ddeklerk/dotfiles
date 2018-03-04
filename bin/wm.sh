@@ -65,7 +65,7 @@ do
 				esac
 				shift
 			done
-			notify-send -t 500 "$(echo -e ${wm})"
+			notify-send -t 500 "Workspace" "$(echo -e ${wm})" -u low
 			;;
 	esac
 done < "$WM_FIFO"

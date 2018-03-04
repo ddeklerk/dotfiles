@@ -1,3 +1,4 @@
+#!/bin/sh
 if ! [ -x "$(command -v getcolor.sh)" ]; then
 	rofi $@
 else
