@@ -94,42 +94,19 @@
 # NOTE: It might be helpful to run dunst -print in a terminal in order
 # to find fitting options for rules.
 
-#[espeak]
-#    summary = "*"
-#    script = dunst_espeak.sh
+[Volume]
+	appname= notify-send
+	summary= "Volume"
+	format = "<b>%s</b>\n%b%p"
 
-#[script-test]
-#    summary = "*script*"
-#    script = dunst_test.sh
+[Brightness]
+	appname = notify-send
+	summary = "Brightness"
+	format = "<b>%s</b>\n%b%p"
 
-#[ignore]
-#    # This notification will not be displayed
-#    summary = "foobar"
-#    format = ""
+[Workspace]
+	appname = notify-send
+	summary = "Workspace"
+	format = "%b"
 
-#[history-ignore]
-#    # This notification will not be saved in history
-#    summary = "foobar"
-#    history_ignore = yes
-
-#[signed_on]
-#    appname = Pidgin
-#    summary = "*signed on*"
-#    urgency = low
-#
-#[signed_off]
-#    appname = Pidgin
-#    summary = *signed off*
-#    urgency = low
-#
-#[says]
-#    appname = Pidgin
-#    summary = *says*
-#    urgency = critical
-#
-#[twitter]
-#    appname = Pidgin
-#    summary = *twitter.com*
-#    urgency = normal
-#
 # vim: ft=cfg
