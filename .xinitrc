@@ -22,24 +22,6 @@ xset fp rehash
 # Set caps to escape
 [ -x "$(command -v xcape)" ] && xcape -e 'Caps_Lock=Escape' &
 
-# Start dunst
-if ! [ -x "$(command -v getcolor.sh)" ]; then
-	dunst &
-else
-	hsetroot -solid \#$(getcolor.sh 7)
-
-	dunst \
-		-lb "#$(getcolor.sh bg)" \
-		-lf "#$(getcolor.sh fg)" \
-		-lfr "#$(getcolor.sh fg)" \
-		-nb "#$(getcolor.sh bg)" \
-		-nf "#$(getcolor.sh fg)" \
-		-nfr "#$(getcolor.sh 4)" \
-		-cb "#$(getcolor.sh bg)" \
-		-cf "#$(getcolor.sh fg)" \
-		-cfr "#$(getcolor.sh 1)" \
-		&
-fi
 # Start compton
 compton &
 
@@ -51,7 +33,9 @@ dropbox &> /dev/null &
 
 unclutter &
 
+[ -x "$HOME/.fehbg" ] && $HOME/.fehbg > /dev/null
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
+[ -x "$HOME/bin/dunst.sh" ] && $HOME/bin/dunst.sh > /dev/null
 [ -x "$HOME/bin/wm.sh" ] && $HOME/bin/wm.sh & > /dev/null
 
 xsetroot -cursor_name left_ptr
