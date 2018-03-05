@@ -109,4 +109,14 @@
 	summary = "Workspace"
 	format = "%b"
 
+[DateTime]
+	appname = notify-send
+	summary = "Datetime"
+	format = "%b"
+
+[Battery]
+	appname = notify-send
+	summary = "Battery"
+	format = "%b"
+
 # vim: ft=cfg

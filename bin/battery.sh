@@ -35,6 +35,11 @@ state() {
 	echo "${BATS}"
 }
 
+notify() {
+
+	notify-send "Battery" "$(level) $(state)" -u low -t 2000
+}
+
 deam() {
 	while true
 	do
@@ -67,9 +72,10 @@ BAT_BELL=${BAT_BELL:-notify-send --urgency critical "Battery low"}
 interval=120
 
 case $1 in
+	-b) bell ;;
 	-d) deam ;;
 	-h) usage ;;
+	-n) notify ;;
 	-s) state ;;
-	-b) bell ;;
 	*) level ;;
 esac
