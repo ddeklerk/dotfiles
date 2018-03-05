@@ -150,4 +150,4 @@ XF86Audio{Play,Pause,Next,Prev}
 
 # Time notification
 super + XF86PowerOff
-	notify-send "`date`"
+	[ -x $HOME/bin/datetime.sh ] && $HOME/bin/datetime.sh
