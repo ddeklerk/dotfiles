@@ -53,3 +53,13 @@ function! s:VSetSearch(cmdtype)
 endfunction
 
 let g:hardtime_default_on=1
+
+" Highlight trailing whitespace in red
+" Have this highlighting not appear whilst you are typing in insert mode
+" Have the highlighting of whitspace apply when you open new buffers
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
