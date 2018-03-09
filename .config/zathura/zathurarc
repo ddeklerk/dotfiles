@@ -36,6 +36,4 @@ set render-loading-fg        \#1d1f21
 set statusbar-bg             \#1d1f21
 set statusbar-fg             \#ffffff
 set tabbar-bg                \#1d1f21
-set tabbar-fg                \#ffffff
 set tabbar-focus-bg          \#1d1f21
-set tabbar-focus-fg          \#b5bd68
