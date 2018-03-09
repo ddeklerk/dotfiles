@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	[ -x $HOME/bin/rofi.sh ] && $HOME/bin/rofi.sh -show || rofi -show
+	[ -x $HOME/bin/dmenu_run.sh ] && $HOME/bin/dmenu_run.sh || dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape

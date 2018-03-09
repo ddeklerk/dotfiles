@@ -2,7 +2,7 @@
 #
 # Edit /etc/systemd/logind.conf and uncomment HandlePowerKey and set it to ignore
 
-res=$(echo "logout|reboot|shutdown" | $HOME/bin/rofi.sh -sep "|" -dmenu -i -p '' -width 8 -lines 3)
+res=$(echo -e "logout\nreboot\nshutdown" | $HOME/bin/dmenu.sh -b -i -p "Power:")
 
 logout() {
 	# Close all windows
@@ -14,19 +14,19 @@ logout() {
 
 case $res in
 	halt|poweroff|shutdown)
-		systemctl poweroff
+		exec systemctl poweroff
 		;;
 	hibernate)
-		systemctl hibernate
+		exec systemctl hibernate
 		;;
 	logout)
 		logout
 		;;
 	restart|reboot)
-		systemctl reboot
+		exec systemctl reboot
 		;;
 	suspend)
-		systemctl suspend
+		exec systemctl suspend
 		;;
 	*)
 esac
