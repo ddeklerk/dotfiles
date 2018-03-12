@@ -4,7 +4,7 @@
 [ -x "$HOME/bin/wm.sh" ] && $HOME/bin/wm.sh &
 
 
-bspc monitor -d I II III IV V VI VII VIII IX X
+bspc monitor -d I II III IV V
 
 bspc config borderless_monocle true
 
