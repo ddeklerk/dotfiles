@@ -13,13 +13,13 @@ m=Master
 i=${1:-5}
 
 level() {
-	light -G | awk '{print int(($1 + 2.5) / 5) * 5}'
+	xbacklight | awk '{print int(($1 + 2.5) / 5) * 5}'
 }
 
 case $command in
-	-|down) light -U ${i} >/dev/null;;
-	+|up) light -A ${i} >/dev/null;;
-	*) light -S $1 >/dev/null;;
+	-|down) xbacklight -dec ${i} >/dev/null;;
+	+|up) xbacklight -inc ${i} >/dev/null;;
+	*) xbacklight -set $1 >/dev/null;;
 esac
 
 notify-send "Brightness" "$(echo -e ${icon})" -h int:value:`level` -t 500 -u low
