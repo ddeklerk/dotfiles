@@ -17,9 +17,9 @@ level() {
 }
 
 case $command in
-	-|down) xbacklight -dec ${i} >/dev/null;;
-	+|up) xbacklight -inc ${i} >/dev/null;;
-	*) xbacklight -set $1 >/dev/null;;
+	-|down) xbacklight -steps 1 -time 0 -dec ${i} >/dev/null;;
+	+|up) xbacklight -steps 1 -time 0 -inc ${i} >/dev/null;;
+	*) xbacklight -steps 1 -time 0 -set $1 >/dev/null;;
 esac
 
 notify-send "Brightness" "$(echo -e ${icon})" -h int:value:`level` -t 500 -u low
