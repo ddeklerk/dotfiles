@@ -1,6 +1,0 @@
-rofi.bw: 0
-rofi.hide-scrollbar: true
-rofi.matching: fuzzy
-rofi.modi: drun,run,window,ssh
-rofi.separator-style: none
-rofi.font: Gohu\ Gohufont\ 8
