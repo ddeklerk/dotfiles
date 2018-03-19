@@ -21,9 +21,3 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 export EDITOR="vim"
 export VISUAL="vim"
-
-export PANEL_FIFO=/tmp/panel-fifo
-export PANEL_FONT="-*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*"
-export PANEL_HEIGHT=13
-export PANEL_ICON_FONT="-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-export PANEL_WM_NAME=bspwm_panel
