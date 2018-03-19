@@ -21,3 +21,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 export EDITOR="vim"
 export VISUAL="vim"
+
+if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+	exec startx
+fi
