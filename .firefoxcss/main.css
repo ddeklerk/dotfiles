@@ -285,11 +285,6 @@ url("chrome://browser/content/history/history-panel.xul") {
 	filter: grayscale(100%) contrast(50%) !important;
 }
 
-#urlbar {
-	/* Place bindings.xml in the same folder as userChrome.css */
-	-moz-binding: url("bindings.xml#urlbar") !important;
-}
-
 #urlbar-container {
 	text-align: center;
 }
