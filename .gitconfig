@@ -9,3 +9,5 @@
 	helper = cache --timeout 10800
 [push]
 	default = current
+[help]
+	autocorrect = 1
