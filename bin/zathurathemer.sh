@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# A script for theming my zathura config to use the colours defined in my
+# Xresources.
+#
+# Depends on getcolor.sh
+
 zathurarc=~/.config/zathura/zathurarc
 sub=""
 
