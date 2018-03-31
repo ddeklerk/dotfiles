@@ -66,3 +66,6 @@ autocmd BufWinLeave * call clearmatches()
 
 " Indicator of the 80th character, which should not be exceeded
 set colorcolumn=80
+
+" Highlight search results with underline and bold
+highlight Search ctermbg=black ctermfg=yellow cterm=bold,underline
