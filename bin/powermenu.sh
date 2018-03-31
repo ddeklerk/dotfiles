@@ -6,8 +6,8 @@ res=$(echo -e "logout\nreboot\nshutdown" | $HOME/bin/dmenu.sh -b -i -p "Power:")
 
 logout() {
 	# Close all windows
-	for window_id in $(bspc query -W); do
-		bspc window $window_id -c
+	for node_id in $(bspc query -N); do
+		bspc node $node_id -c
 	done
 	bspc quit
 }
