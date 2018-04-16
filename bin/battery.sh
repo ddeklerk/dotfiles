@@ -36,7 +36,6 @@ state() {
 }
 
 notify() {
-
 	notify-send "Battery" "$(level) $(state)" -u low -t 2000
 }
 
