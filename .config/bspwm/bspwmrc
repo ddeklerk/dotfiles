@@ -3,13 +3,19 @@
 # Start workspace notifications
 [ -x "$HOME/bin/wm.sh" ] && $HOME/bin/wm.sh &
 
-
 bspc monitor -d I II III IV V
 
+gap=6
+
 bspc config borderless_monocle true
+bspc config gapless_monocle true
 
 bspc config border_width 1
-bspc config window_gap 6
+bspc config window_gap $gap
+bspc config bottom_padding -$(( $gap / 2 ))
+bspc config left_padding -$(( $gap / 2 ))
+bspc config right_padding -$(( $gap / 2 ))
+bspc config top_padding -$(( $gap / 2 ))
 
 bspc config focused_border_color "#$(getcolor.sh fg)"
 bspc config normal_border_color "#$(getcolor.sh bg)"
