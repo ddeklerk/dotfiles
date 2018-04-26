@@ -22,16 +22,11 @@ xset fp rehash
 # Set caps to escape
 [ -x "$(command -v xcape)" ] && xcape -e 'Caps_Lock=Escape' &
 
-# Start compton
-compton &
-
 # Start redshift
 redshift &
 
 # Start dropbox
 dropbox &> /dev/null &
-
-unclutter &
 
 [ -x "$HOME/.fehbg" ] && $HOME/.fehbg > /dev/null
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
