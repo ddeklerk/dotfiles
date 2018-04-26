@@ -35,12 +35,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 " Allow saving of files as sudo when I forgot to start vim using sudo
 cmap w!! w !sudo tee > /dev/null %
 
-" Clear and redraw the screen, and mute search highlighting
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
-
-set hlsearch
-set incsearch
-
 " Search for the selected text
 xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
 xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
@@ -66,6 +60,3 @@ autocmd BufWinLeave * call clearmatches()
 
 " Indicator of the 80th character, which should not be exceeded
 set colorcolumn=80
-
-" Highlight search results with underline and bold
-highlight Search ctermbg=black ctermfg=yellow cterm=bold,underline
