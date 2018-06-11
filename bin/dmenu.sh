@@ -1,5 +1,5 @@
 #!/bin/bash
-font="\"Gohu GohuFont:pixelsize=11\""
+font="\"scientifica:pixelsize=11\""
 
 command=""
 
