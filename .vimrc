@@ -6,12 +6,6 @@ syntax on
 " Enable the matchit plugin to jump between matching keywords
 runtime macros/matchit.vim
 
-" Set the colorscheme
-if filereadable(expand("~/.vimrc_background"))
-	let base16colorspace=256
-	source ~/.vimrc_background
-endif
-
 nmap <leader>l :set list!<CR>
 set listchars=tab:▸\ ,eol:¬,trail:·,precedes:←,extends:→,nbsp:␣
 
