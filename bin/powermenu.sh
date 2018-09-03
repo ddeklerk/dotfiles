@@ -2,7 +2,7 @@
 #
 # Edit /etc/systemd/logind.conf and uncomment HandlePowerKey and set it to ignore
 
-res=$(echo -e "logout\nreboot\nshutdown" | $HOME/bin/dmenu.sh -b -i -p "Power:")
+res=$(echo -e "logout\nreboot\npoweroff" | $HOME/bin/dmenu.sh -b -i -p "Power:")
 
 logout() {
 	# Close all windows
