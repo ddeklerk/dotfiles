@@ -19,4 +19,4 @@ fi
 # Escape $@
 [ ${#} -ne 0 ] && printf -v args "%q " "${@}"
 
-eval "${command} ${options} -fn ${font}" "$args"
+eval "${command} ${options}" "$args"
