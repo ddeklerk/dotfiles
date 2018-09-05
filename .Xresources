@@ -1,3 +1,0 @@
-# include ".Xresources.d/colors"
-# include ".Xresources.d/urxvt"
-urxvt*font: xft:scientifica:pixelsize=11
