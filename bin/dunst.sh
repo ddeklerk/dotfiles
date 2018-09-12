@@ -9,7 +9,7 @@ y=18
 geom="${width}x${height}+${x}+${y}"
 
 if ! [ -x "$(command -v getcolor.sh)" ]; then
-	dunst &
+	dunst -geometry "${geom}" &
 else
 	dunst \
 		-lb "#$(getcolor.sh bg)" \
