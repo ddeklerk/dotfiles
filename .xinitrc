@@ -24,7 +24,6 @@ redshift &
 # Start dropbox
 dropbox &> /dev/null &
 
-[ -x "$HOME/.fehbg" ] && $HOME/.fehbg > /dev/null
 [ -x "$HOME/bin/battery.sh" ] && $HOME/bin/battery.sh -d > /dev/null
 [ -x "$HOME/bin/dunst.sh" ] && $HOME/bin/dunst.sh > /dev/null
 
