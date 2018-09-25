@@ -1,7 +1,7 @@
 #!/bin/bash
-focused="\ue000" # Filled square
-occupied="\ue001" # Thick border square
-free="\ue130" # Regular square
+focused="x"
+occupied="+"
+free="-"
 
 WM_FIFO=/tmp/wm-fifo
 
