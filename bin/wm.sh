@@ -1,7 +1,7 @@
 #!/bin/bash
-focused="x"
-occupied="+"
-free="-"
+focused="\x"
+occupied="\+"
+free="\-"
 
 WM_FIFO=/tmp/wm-fifo
 
