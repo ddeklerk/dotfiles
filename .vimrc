@@ -61,3 +61,7 @@ autocmd BufWinLeave * call clearmatches()
 
 " Indicator of the 81th character, which should not be exceeded
 set colorcolumn=81
+
+if filereadable(expand("~/.vimrc_background"))
+	source ~/.vimrc_background
+endif
