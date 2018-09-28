@@ -62,6 +62,10 @@ autocmd BufWinLeave * call clearmatches()
 " Indicator of the 81th character, which should not be exceeded
 set colorcolumn=81
 
+" Base16 Shell
 if filereadable(expand("~/.vimrc_background"))
 	source ~/.vimrc_background
+
+	" Fix base16 highlighting of xml end tags
+	hi link xmlEndTag xmlTag
 endif
