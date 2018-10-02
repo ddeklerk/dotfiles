@@ -1,15 +1,11 @@
 #!/bin/bash
 
-icon=\\ue1c3
-
 # Take the first argument
 command=$1
 # Shift the arguments so we can process the rest
 shift
 
-# Use the Master channel
-m=Master
-# Interval is either 1 or whatever is supplied as the second argument
+# Interval is either 5 or whatever is supplied as the second argument
 i=${1:-5}
 
 level() {
@@ -22,4 +18,4 @@ case $command in
 	*) xbacklight -steps 1 -time 0 -set $1 >/dev/null;;
 esac
 
-notify-send "Brightness" "$(echo -e ${icon})" -h int:value:`level` -t 500 -u low
+notify-send "Brightness" -h int:value:`level` -t 500 -u low
