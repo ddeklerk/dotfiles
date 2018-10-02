@@ -1,8 +1,5 @@
 #!/bin/bash
 
-on=\\ue04e
-off=\\ue04f
-
 # Take the first argument
 command=$1
 # Shift the arguments so we can process the rest
@@ -14,24 +11,21 @@ m=Master
 i=${1:-1}
 
 level() {
-	amixer get $m | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
+	echo ${1:-$(amixer get ${m})} | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
 }
 
 state() {
-	amixer get $m | sed -n 's/^.*\[\(o[nf]\+\)]$/\1/p' | uniq
+	echo ${1:-$(amixer get ${m})} | sed -n 's/^.*\[\(o[nf]\+\)]$/\1/p' | uniq
 }
 
 case $command in
-	-|down) amixer set $m ${i}%- >/dev/null;;
-	+|up) amixer set $m ${i}%+ >/dev/null;;
-	!|toggle) amixer set $m toggle >/dev/null;;
-	*) amixer set $m $1 >/dev/null;;
+	-|down) status=$(amixer set $m ${i}%-);;
+	+|up) status=$(amixer set $m ${i}%+);;
+	!|toggle) status=$(amixer set $m toggle);;
+	*) status=$(amixer set $m $command);;
 esac
 
-if [ `state` = "on" ]; then
-	icon=$on
-else
-	icon=$off
-fi
+level=$(level "$status")
+state=$(state "$status" | awk '{print toupper($0)}')
 
-notify-send "Volume" "$(echo -e ${icon})" -h int:value:`level` -t 500 -u low
+notify-send "Volume" "${state} " -h int:value:${level} -t 500 -u low
