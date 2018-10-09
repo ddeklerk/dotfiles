@@ -10,6 +10,14 @@ if (has("termguicolors"))
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
+" Base16 Shell
+if filereadable(expand("~/.vimrc_background"))
+	source ~/.vimrc_background
+
+	" Fix base16 highlighting of xml end tags
+	hi link xmlEndTag xmlTag
+endif
+
 " Enable the matchit plugin to jump between matching keywords
 runtime macros/matchit.vim
 
@@ -61,11 +69,3 @@ autocmd BufWinLeave * call clearmatches()
 
 " Indicator of the 81th character, which should not be exceeded
 set colorcolumn=81
-
-" Base16 Shell
-if filereadable(expand("~/.vimrc_background"))
-	source ~/.vimrc_background
-
-	" Fix base16 highlighting of xml end tags
-	hi link xmlEndTag xmlTag
-endif
