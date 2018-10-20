@@ -14,8 +14,9 @@ endif
 if filereadable(expand("~/.vimrc_background"))
 	source ~/.vimrc_background
 
-	" Fix base16 highlighting of xml end tags
-	hi link xmlEndTag xmlTag
+	" Personal fixes on top of base16
+	highlight link xmlEndTag xmlTag
+	highlight ALEError ctermbg=none cterm=underline ctermfg=red
 endif
 
 " Enable the matchit plugin to jump between matching keywords
@@ -60,7 +61,7 @@ let g:hardtime_default_on=1
 " Highlight trailing whitespace in red
 " Have this highlighting not appear whilst you are typing in insert mode
 " Have the highlighting of whitspace apply when you open new buffers
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
