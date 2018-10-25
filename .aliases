@@ -17,6 +17,6 @@ alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 alias vimrc='vim $HOME/.vimrc'
 
 # pacman
-alias pacorph='sudo pacman -Rns $(pacman -Qtdq)'
+alias pacorph='pacman -Qtdq && sudo pacman -Rns $(pacman -Qtdq)'
 alias pacls='pacman -Q | wc -l'
 alias pacalone='comm -23 <(pacman -Qqt | sort) <(pacman -Sqg base base-devel | sort)'
