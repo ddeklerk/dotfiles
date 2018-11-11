@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # Start workspace notifications
-[ -x "$HOME/bin/wm.sh" ] && $HOME/bin/wm.sh &
+[ -x "$HOME/bin/wm" ] && $HOME/bin/wm &
 
 bspc monitor -d I II III IV V
 

@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	[ -x $HOME/bin/dmenu_run.sh ] && $HOME/bin/dmenu_run.sh || dmenu_run
+	[ -x $HOME/bin/dmenu_run ] && $HOME/bin/dmenu_run || dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -125,24 +125,24 @@ super + {Left,Down,Up,Right}
 #
 
 XF86Audio{Raise,Lower}Volume
-	[ -x $HOME/bin/volume.sh ] && $HOME/bin/volume.sh {+,-} || amixer set Master 1%{+,-}
+	[ -x $HOME/bin/volume ] && $HOME/bin/volume {+,-} || amixer set Master 1%{+,-}
 
 XF86AudioMute
-	[ -x $HOME/bin/volume.sh ] && $HOME/bin/volume.sh toggle || amixer set Master toggle
+	[ -x $HOME/bin/volume ] && $HOME/bin/volume toggle || amixer set Master toggle
 
 #
 # Powermenu
 #
 
 XF86PowerOff
-	~/bin/powermenu.sh
+	~/bin/powermenu
 
 super + shift + Escape
-	~/bin/powermenu.sh
+	~/bin/powermenu
 
 # Screen brightness
 XF86MonBrightness{Up,Down}
-	[ -x $HOME/bin/backlight.sh ] && $HOME/bin/backlight.sh {+,-} || light {-A,-U} 5
+	[ -x $HOME/bin/backlight ] && $HOME/bin/backlight {+,-} || light {-A,-U} 5
 
 # Media player controls
 XF86Audio{Play,Pause,Next,Prev}
@@ -150,4 +150,4 @@ XF86Audio{Play,Pause,Next,Prev}
 
 # Time notification
 super + XF86PowerOff
-	[ -x $HOME/bin/datetime.sh ] && $HOME/bin/datetime.sh
+	[ -x $HOME/bin/datetime ] && $HOME/bin/datetime
