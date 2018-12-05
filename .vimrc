@@ -70,3 +70,5 @@ autocmd BufWinLeave * call clearmatches()
 
 " Indicator of the 81th character, which should not be exceeded
 set colorcolumn=81
+
+let g:EditorConfig_core_mode = 'external_command'
