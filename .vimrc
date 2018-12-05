@@ -72,3 +72,6 @@ autocmd BufWinLeave * call clearmatches()
 set colorcolumn=81
 
 let g:EditorConfig_core_mode = 'external_command'
+
+" Set textwidth automatically for md files
+au BufRead,BufNewFile *.md setlocal textwidth=80
