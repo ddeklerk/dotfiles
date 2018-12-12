@@ -15,3 +15,6 @@ alias dots='git --git-dir=$HOME/.dots.git/ --work-tree=$HOME'
 
 # vim
 alias vimrc='vim $HOME/.vimrc'
+
+alias poweroff='sudo poweroff'
+alias reboot='sudo reboot'
