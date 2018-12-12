@@ -22,3 +22,6 @@
 [submodule ".vim/pack/plugins/start/editorconfig-vim"]
 	path = .vim/pack/plugins/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".vim/pack/plugins/start/yats.vim"]
+	path = .vim/pack/plugins/start/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git
