@@ -1,6 +1,4 @@
 #!/bin/bash
-#
-# Edit /etc/systemd/logind.conf and uncomment HandlePowerKey and set it to ignore
 
 res=$(echo -e "logout\nreboot\npoweroff" | dmenu -b -i -p "Power:")
 
@@ -14,19 +12,13 @@ logout() {
 
 case $res in
 	halt|poweroff|shutdown)
-		exec systemctl poweroff
-		;;
-	hibernate)
-		exec systemctl hibernate
+		exec sudo poweroff
 		;;
 	logout)
 		logout
 		;;
 	restart|reboot)
-		exec systemctl reboot
-		;;
-	suspend)
-		exec systemctl suspend
+		exec reboot
 		;;
 	*)
 esac
