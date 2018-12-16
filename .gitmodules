@@ -19,3 +19,6 @@
 [submodule ".vim/pack/plugins/start/yats.vim"]
 	path = .vim/pack/plugins/start/yats.vim
 	url = https://github.com/HerringtonDarkholme/yats.vim.git
+[submodule ".vim/pack/plugins/start/gruvbox"]
+	path = .vim/pack/plugins/start/gruvbox
+	url = https://github.com/morhetz/gruvbox.git
