@@ -14,11 +14,5 @@ eval "`dircolors -b $DIR_COLORS`"
 
 [ -f "$HOME/.aliases" ] && . $HOME/.aliases
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-	[ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-	eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 # So as not to be disturbed by the Ctrl-S Ctrl-Q in terminal:
 stty -ixon

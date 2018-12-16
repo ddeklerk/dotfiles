@@ -10,15 +10,6 @@ if (has("termguicolors"))
 	let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 
-" Base16 Shell
-if filereadable(expand("~/.vimrc_background"))
-	source ~/.vimrc_background
-
-	" Personal fixes on top of base16
-	highlight link xmlEndTag xmlTag
-	highlight ALEError ctermbg=none cterm=underline ctermfg=red
-endif
-
 " Enable the matchit plugin to jump between matching keywords
 runtime macros/matchit.vim
 
