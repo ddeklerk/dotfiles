@@ -13,12 +13,6 @@
 [submodule ".vim/pack/plugins/start/vim-javascript"]
 	path = .vim/pack/plugins/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
-[submodule ".config/base16-shell"]
-	path = .config/base16-shell
-	url = https://github.com/chriskempson/base16-shell
-[submodule ".vim/pack/plugins/start/base16-vim"]
-	path = .vim/pack/plugins/start/base16-vim
-	url = https://github.com/chriskempson/base16-vim
 [submodule ".vim/pack/plugins/start/editorconfig-vim"]
 	path = .vim/pack/plugins/start/editorconfig-vim
 	url = https://github.com/editorconfig/editorconfig-vim.git
