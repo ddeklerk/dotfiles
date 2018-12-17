@@ -1,6 +1,3 @@
-[submodule ".vim/pack/plugins/start/tabular"]
-	path = .vim/pack/plugins/start/tabular
-	url = git://github.com/godlygeek/tabular.git
 [submodule ".vim/pack/plugins/start/vim-hardtime"]
 	path = .vim/pack/plugins/start/vim-hardtime
 	url = git://github.com/takac/vim-hardtime.git
