@@ -13,6 +13,10 @@ endif
 set background=dark
 colorscheme gruvbox
 
+let g:EditorConfig_core_mode = 'external_command'
+
+let g:hardtime_default_on=1
+
 " Enable the matchit plugin to jump between matching keywords
 runtime macros/matchit.vim
 
@@ -28,30 +32,6 @@ set hidden
 
 set backupcopy=yes
 
-" Automatically reload .vimrc when saved
-if has("autocmd")
-	autocmd bufwritepost .vimrc source $MYVIMRC
-endif
-
-" When typing %%, expand to the path of the active buffer
-cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
-
-" Allow saving of files as sudo when I forgot to start vim using sudo
-cmap w!! w !sudo tee > /dev/null %
-
-" Search for the selected text
-xnoremap * :<C-u>call <SID>VSetSearch('/')<CR>/<C-R>=@/<CR><CR>
-xnoremap # :<C-u>call <SID>VSetSearch('?')<CR>?<C-R>=@/<CR><CR>
-
-function! s:VSetSearch(cmdtype)
-	let temp = @s
-	norm! gv"sy
-	let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
-	let @s = temp
-endfunction
-
-let g:hardtime_default_on=1
-
 " Highlight trailing whitespace in red
 " Have this highlighting not appear whilst you are typing in insert mode
 " Have the highlighting of whitspace apply when you open new buffers
@@ -64,8 +44,6 @@ autocmd BufWinLeave * call clearmatches()
 
 " Indicator of the 81th character, which should not be exceeded
 set colorcolumn=81
-
-let g:EditorConfig_core_mode = 'external_command'
 
 " Set textwidth automatically for md files
 au BufRead,BufNewFile *.md setlocal textwidth=80
