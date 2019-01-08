@@ -121,6 +121,16 @@ super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
 #
+# Volume controls
+#
+
+XF86Audio{Raise,Lower}Volume
+	[ -x $HOME/bin/volume ] && $HOME/bin/volume {+,-} || amixer set Master 1%{+,-}
+
+XF86AudioMute
+	[ -x $HOME/bin/volume ] && $HOME/bin/volume toggle || amixer set Master toggle
+
+#
 # Powermenu
 #
 
