@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 #
 # ~/.aliases
 #
 # Add the following snippet to .bashrc or .zshrc
 #
-#	[ -f "$HOME/.aliases" ] && . $HOME/.aliases
+#	[ -f "$HOME/.aliases" ] && source $HOME/.aliases
 
 # Default bash aliases
 alias ls='ls --color=auto'
