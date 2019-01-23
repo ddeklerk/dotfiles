@@ -1,10 +1,10 @@
 #!/bin/sh
-resolution=$(xrandr --current | grep \* | awk '{print $1}')
-monitor_width=$(echo $resolution | cut -d 'x' -f 1)
+resolution=$(xrandr --current | grep "\*" | awk '{print $1}')
+monitor_width=$(echo "$resolution" | cut -d 'x' -f 1)
 width=300
 height=5
 
-x=$(( $monitor_width / 2 - $width / 2 ))
+x=$(( monitor_width / 2 - width / 2 ))
 y=18
 geom="${width}x${height}+${x}+${y}"
 

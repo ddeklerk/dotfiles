@@ -19,13 +19,13 @@ state() {
 }
 
 case $command in
-	-|down) status=$(amixer set $m ${i}%-);;
-	+|up) status=$(amixer set $m ${i}%+);;
+	-|down) status=$(amixer set $m "${i}%-");;
+	+|up) status=$(amixer set $m "${i}%+");;
 	!|toggle) status=$(amixer set $m toggle);;
-	*) status=$(amixer set $m $command);;
+	*) status=$(amixer set $m "$command");;
 esac
 
 level=$(level "$status")
 state=$(state "$status" | awk '{print toupper($0)}')
 
-notify-send "Volume" "${state} " -h int:value:${level} -t 500 -u low
+notify-send "Volume" "${state} " -h "int:value:${level}" -t 500 -u low

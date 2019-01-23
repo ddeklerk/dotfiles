@@ -1,11 +1,11 @@
 #!/bin/bash
 
-res=$(echo -e "logout\nreboot\npoweroff" | dmenu -b -i -p "Power:")
+res=$(printf "logout\nreboot\npoweroff" | dmenu -b -i -p "Power:")
 
 logout() {
 	# Close all windows
 	for node_id in $(bspc query -N); do
-		bspc node $node_id -c
+		bspc node "$node_id" -c
 	done
 	bspc quit
 }
@@ -18,7 +18,7 @@ case $res in
 		logout
 		;;
 	restart|reboot)
-		exec reboot
+		exec sudo reboot
 		;;
 	*)
 esac
