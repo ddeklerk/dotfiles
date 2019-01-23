@@ -10,9 +10,9 @@ export PS1="\[\033[38;5;12m\][\[$(tput sgr0)\]\[\033[38;5;10m\]\u\[$(tput sgr0)\
 [ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
 [ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
 [ -e "$DIR_COLORS" ] || DIR_COLORS=""
-eval "`dircolors -b $DIR_COLORS`"
+eval "$(dircolors -b $DIR_COLORS)"
 
-[ -f "$HOME/.aliases" ] && source $HOME/.aliases
+[ -f "$HOME/.aliases" ] && source "$HOME/.aliases"
 
 # So as not to be disturbed by the Ctrl-S Ctrl-Q in terminal:
 stty -ixon
