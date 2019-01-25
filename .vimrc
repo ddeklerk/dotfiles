@@ -47,3 +47,9 @@ set colorcolumn=81
 
 " Set textwidth automatically for md files
 au BufRead,BufNewFile *.md setlocal textwidth=80
+
+augroup markdownSpell
+	autocmd!
+	autocmd FileType markdown setlocal spell
+	autocmd BufRead,BufNewFile *.md setlocal spell
+augroup END
