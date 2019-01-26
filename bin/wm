@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 focused="\x"
 occupied="\+"
 free="\-"
@@ -19,10 +19,8 @@ do
 
 			wmstatus=$(bspc wm --get-status)
 			IFS=":"
-			set -- "${wmstatus#?}"
-			while [ $# -gt 0 ]
+			for item in ${wmstatus#?}
 			do
-				item=$1
 				name=${item#?}
 				case $item in
 					[mM]*)
@@ -37,7 +35,7 @@ do
 								# FG=${col15}
 								;;
 						esac
-						[ "$num_mon" -lt 2 ] && shift && continue
+						[ "$num_mon" -lt 2 ] && continue
 						wm="${wm} ${name} "
 						;;
 					[fFoOuU]*)
@@ -63,9 +61,8 @@ do
 						# TODO: display these
 						;;
 				esac
-				shift
 			done
-			notify-send -t 500 "Workspace" "${wm}" -u low
+			notify-send -t 500 "Workspace" "$wm" -u low
 			;;
 	esac
 done < "$WM_FIFO"
