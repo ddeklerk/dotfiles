@@ -14,4 +14,14 @@ privilege_indicator() {
 	fi
 }
 
-export PS1="\u \[\033[32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \$(privilege_indicator) \$(tput sgr0)"
+exit_code() {
+	exit="$?"
+	# Don't show exit code when it's 0 (no error) or 130 (cancelled with Ctrl-C)
+	if [ $exit -ne 0 ] && [ $exit -ne 130 ]
+	then
+		tput setaf 9
+		echo "$exit "
+	fi
+}
+
+export PS1="\$(exit_code)\[\033[32m\]\W\[\033[33m\]\$(parse_git_branch)\[\033[00m\] \$(privilege_indicator) \$(tput sgr0)"
