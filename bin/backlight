@@ -10,10 +10,13 @@ level() {
 	xbacklight | awk '{print int(($1 + 2.5) / 5) * 5}'
 }
 
-case $command in
-	-|down) xbacklight -steps 1 -time 0 -dec "${i}" >/dev/null;;
-	+|up) xbacklight -steps 1 -time 0 -inc "${i}" >/dev/null;;
-	*) xbacklight -steps 1 -time 0 -set "$1" >/dev/null;;
-esac
+if [ $# -gt 0 ]
+then
+	case $command in
+		-|down) xbacklight -steps 1 -time 0 -dec "${i}" >/dev/null;;
+		+|up) xbacklight -steps 1 -time 0 -inc "${i}" >/dev/null;;
+		*) xbacklight -steps 1 -time 0 -set "$1" >/dev/null;;
+	esac
+fi
 
 notify-send "Brightness" -h "int:value:$(level)" -t 500 -u low
