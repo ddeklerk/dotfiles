@@ -2,11 +2,9 @@
 
 # Take the first argument
 command=$1
-# Shift the arguments so we can process the rest
-shift
 
 # Interval is either 5 or whatever is supplied as the second argument
-i=${1:-5}
+i=${2:-5}
 
 level() {
 	xbacklight | awk '{print int(($1 + 2.5) / 5) * 5}'
