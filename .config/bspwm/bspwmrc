@@ -5,6 +5,10 @@
 
 bspc monitor -d I II III IV V
 
+bspc config single_monocle true
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
 # Make Zathura tiled. For some reason it starts up in floating mode otherwise
 bspc rule -a Zathura state=tiled
 bspc rule -a '*:soffice' state=tiled
